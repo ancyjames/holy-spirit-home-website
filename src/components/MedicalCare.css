@@ -1,0 +1,115 @@
+.medical {
+  background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+}
+
+.medical-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.medical-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: var(--bg-white);
+  padding: 24px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.medical-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.medical-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
+  color: var(--text-white);
+  border-radius: 12px;
+}
+
+.medical-content h3 {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.medical-content p {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.hospitals-section {
+  background-color: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.hospitals-section h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+
+.hospitals-intro {
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+
+.hospitals-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hospital-tag {
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.hospital-tag:hover {
+  background-color: var(--secondary-light);
+  color: var(--text-white);
+  border-color: var(--secondary-color);
+}
+
+@media (max-width: 1200px) {
+  .medical-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .medical-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medical-card {
+    padding: 20px;
+  }
+
+  .hospitals-section {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,168 @@
+.daily-life {
+  background-color: var(--bg-cream);
+}
+
+.daily-life-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.schedule-section {
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.schedule-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--bg-cream);
+}
+
+.schedule-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 100px 30px 1fr;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-time {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.schedule-divider {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.schedule-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.schedule-activity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dark);
+}
+
+.schedule-activity svg {
+  color: var(--text-light);
+}
+
+.life-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.life-card {
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-left: 4px solid transparent;
+}
+
+.life-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+}
+
+.life-card.prayer {
+  border-left-color: var(--accent-color);
+}
+
+.life-card.food {
+  border-left-color: var(--secondary-color);
+}
+
+.life-card.recreation {
+  border-left-color: var(--primary-color);
+}
+
+.life-card-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.prayer .life-card-icon {
+  background-color: #FFF3CD;
+  color: var(--accent-color);
+}
+
+.food .life-card-icon {
+  background-color: #D4EDDA;
+  color: var(--secondary-color);
+}
+
+.recreation .life-card-icon {
+  background-color: #FFE4D4;
+  color: var(--primary-color);
+}
+
+.life-card h4 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.life-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .daily-life-content {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-section {
+    order: 2;
+  }
+
+  .life-features {
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-item {
+    grid-template-columns: 80px 20px 1fr;
+  }
+
+  .schedule-time {
+    font-size: 0.8rem;
+  }
+}

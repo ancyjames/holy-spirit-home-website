@@ -1,0 +1,186 @@
+.admission {
+  background-color: var(--bg-white);
+}
+
+.admission-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.requirements-section,
+.guidelines-section {
+  background-color: var(--bg-light);
+  padding: 30px;
+  border-radius: var(--border-radius-lg);
+}
+
+.requirements-section h3,
+.guidelines-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--bg-white);
+}
+
+.requirements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.requirement-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-white);
+  color: var(--primary-color);
+  border-radius: 8px;
+}
+
+.requirement-item span {
+  color: var(--text-dark);
+  line-height: 1.5;
+  padding-top: 6px;
+}
+
+.eligibility-note {
+  display: flex;
+  gap: 12px;
+  background-color: #FFF3CD;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent-color);
+}
+
+.eligibility-note svg {
+  color: var(--accent-color);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.eligibility-note strong {
+  display: block;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.eligibility-note p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.guidelines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.guideline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.guideline-icon {
+  color: var(--secondary-color);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.guideline-item span {
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.caretaker-info {
+  display: flex;
+  gap: 16px;
+  background-color: var(--bg-white);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.caretaker-info svg {
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.caretaker-info h4 {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.caretaker-info p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
+  color: var(--text-white);
+  padding: 50px;
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+}
+
+.cta-section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+  color: var(--text-white);
+}
+
+.cta-section p {
+  opacity: 0.95;
+  margin-bottom: 24px;
+}
+
+.cta-section .btn-primary {
+  background-color: var(--bg-white);
+  color: var(--secondary-color);
+}
+
+.cta-section .btn-primary:hover {
+  background-color: var(--bg-cream);
+}
+
+@media (max-width: 992px) {
+  .admission-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .requirements-section,
+  .guidelines-section {
+    padding: 24px;
+  }
+
+  .cta-section {
+    padding: 30px 20px;
+  }
+}
